@@ -1,15 +1,18 @@
 <template>
     <div>
-        <v-container class="pa-5 my-5">
+        <v-container class="pa-10 my-10">
             <v-row>
                 <v-col>
                     <v-card variant="text">
                         <v-card-item>
-                            <div class="text-h1 font-weight-regular text-white">Discover Digital Art & Collect NFTs</div>
-                            <!-- <v-card-subtitle>This is a subtitle</v-card-subtitle> -->
+                            <div class="text-h1 font-weight-bold text-white">Discover
+                                Digital Art
+                                & Collect Nfts</div>
+                            <v-card-subtitle></v-card-subtitle>
                         </v-card-item>
                         <v-card-text class="text-body-1 font-weight-regular ">
-                            NFT Marketplace UI Created with Anima For Figma. Collect, Buy And Sell Art Collections from More Than 20k
+                            NFT Marketplace UI Created with Anima For Figma. Collect, Buy And Sell Art Collections from More
+                            Than 20k
                             NFT Artists.
                         </v-card-text>
                         <v-card-text>
@@ -18,14 +21,14 @@
                         </v-card-text>
                     </v-card>
 
-                    <v-card-actions class="justify-around">
-                        <div class="ma-2 pa-2 font-weight-bold text-h6">240k+
+                    <v-card-actions>
+                        <div class="ma-2 pa-2 font-weight-bold text-h4">240k+
                             <div class="font-weight-light">Total sale</div>
                         </div>
-                        <div class="ma-2 pa-2  font-weight-bold text-h6">100+
+                        <div class="ma-2 pa-2  font-weight-bold text-h4">100+
                             <div class="font-weight-light">Auctions</div>
                         </div>
-                        <div class="ma-2 pa-2 font-weight-bold text-h6">240k+
+                        <div class="ma-2 pa-2 font-weight-bold text-h4">240k+
                             <div class="font-weight-light">Artists</div>
                         </div>
                     </v-card-actions>
