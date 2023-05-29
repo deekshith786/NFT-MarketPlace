@@ -27,6 +27,7 @@ const myCustomTheme = {
     success: '#4CAF50',
     warning: '#FB8C00',
     deeColor: '#f2eae1',
+    customButton: "#a259ff"
   },
 }
 export default createVuetify({

@@ -1,7 +1,8 @@
 <template>
-  <h1>HomPage</h1>
+  <HeroSection />
 </template>
 
 <script setup>
-import Navbar from '@/components/Navbar.vue';
+import HeroSection from '@/components/home/HeroSection.vue';
+
 </script>

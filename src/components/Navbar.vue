@@ -6,7 +6,7 @@
         <v-btn text="Asdf">Marketplace</v-btn>
         <v-btn>Rankings</v-btn>
         <v-btn>Connect a wallet</v-btn>
-        <v-btn prepend-icon="mdi mdi-account-outline" rounded variant="flat" color="#a259ff" class="text-white">Sign Up</v-btn>
+        <v-btn prepend-icon="mdi mdi-account-outline" rounded variant="flat" color="customButton" class="text-white">Sign Up</v-btn>
     </v-toolbar>
 </template>
 <script>
