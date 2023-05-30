@@ -44,7 +44,7 @@
                         <v-card-text class="d-flex">
 
                             <v-avatar>
-                                <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John"></v-img>
+                                <v-img src="https://w0.peakpx.com/wallpaper/482/730/HD-wallpaper-7th-hokage-naruto-sasuke-sasuke-naruto-sakura-sasuke-and-sakura-anime-anime-art-anime-sakura.jpg" alt="John"></v-img>
                             </v-avatar>
                             <p class="ml-2 pa-2">Animakid</p>
 

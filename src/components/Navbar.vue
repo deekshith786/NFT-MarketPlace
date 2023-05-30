@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar class="navbar">
+    <v-toolbar class="navbar px-10">
         <v-icon icon="mdi mdi-storefront-outline" color="#8a38f5"></v-icon>
         <v-toolbar-title><span class="font-weight-bold mr-2">NFT</span>Marketplace</v-toolbar-title>
         <v-spacer></v-spacer>

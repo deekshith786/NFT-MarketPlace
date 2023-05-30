@@ -18,6 +18,11 @@
                             <v-img :src="card.src" max-height="100px" min-height="100px" cover></v-img>
                         </v-card>
                     </v-col>
+                    <v-card-item>
+                        <v-card-title class="mb-2">{{ card.title }}</v-card-title>
+                        <v-avatar image="https://images.goodsmile.info/cgm/images/product/20180306/7104/50679/large/900bd82e872f32e9671dedfb0e0a7381.jpg"></v-avatar>
+                        <span class="ml-3">{{ card.name }}</span>
+                    </v-card-item>
                 </v-row>
             </v-col>
         </v-row>
@@ -32,19 +37,25 @@ export default {
     setup() {
         const cards = ref([
             {
-                title: 'Pre-fab homes',
+                title: 'DSGN Animals',
+                name: 'MrFox',
                 src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
                 flex: 4,
+                avatar: '',
             },
             {
-                title: 'Favorite road trips',
+                title: 'Magic Mushrooms',
+                name: 'Shroomie',
                 src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
                 flex: 4,
+                avatar: '',
             },
             {
-                title: 'Best airlines',
+                title: 'Disco Machines',
+                name: 'Bekind2Robots',
                 src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg',
                 flex: 4,
+                avatar: '',
             },
         ])
 
