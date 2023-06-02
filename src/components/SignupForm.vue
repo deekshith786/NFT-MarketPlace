@@ -8,7 +8,7 @@
                 <v-col>
                     <div>
                         <h1>Create Account</h1>
-                        <h2 class="font-weight-light my-2">Welcome! Enter Your Details And Start Creating, Collection And
+                        <h2 class="font-weight-light mb-5">Welcome! Enter Your Details And Start Creating, Collection And
                             Selling
                             NFTs. </h2>
                     </div>
