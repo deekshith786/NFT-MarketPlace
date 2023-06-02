@@ -1,12 +1,14 @@
 <template>
     <ArtistInfo />
+    <ArtistCardsSection />
 </template>
 
 <script>
+import ArtistCardsSection from '@/components/artist/ArtistCardsSection.vue';
 import ArtistInfo from '@/components/artist/ArtistInfo.vue';
 
 export default {
-    components: { ArtistInfo }
+    components: { ArtistInfo, ArtistCardsSection }
 }
 
 </script>
