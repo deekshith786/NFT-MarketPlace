@@ -14,28 +14,30 @@
                     </div>
                     <form @submit.prevent="submit">
                         <v-responsive max-width="500">
-                            <v-text-field variant="outline" prepend-inner-icon="mdi mdi-account-outline" bg-color="#ffffff"
-                                class="text-black" rounded="xl" v-model="userName.value.value"
-                                placeholder="username"></v-text-field>
+                            <v-text-field prepend-inner-icon="mdi mdi-account-outline" bg-color="#ffffff" class="text-black"
+                                rounded="xl" width="20" v-model="name.value.value" :counter="10" variant="solo"
+                                :error-messages="name.errorMessage.value" label="userName"></v-text-field>
                         </v-responsive>
                         <v-responsive max-width="500">
-                            <v-text-field variant="outline" prepend-inner-icon="mdi mdi-email-outline" bg-color="#ffffff"
-                                class="text-black" rounded="xl" v-model="email.value.value"
-                                placeholder="email"></v-text-field>
+                            <v-text-field prepend-inner-icon="mdi mdi-email-outline" bg-color="#ffffff" class="text-black"
+                                rounded="xl" width="20" v-model="email.value.value" :counter="10" variant="solo"
+                                :error-messages="email.errorMessage.value" label="email"></v-text-field>
                         </v-responsive>
                         <v-responsive max-width="500">
-                            <v-text-field variant="outline" prepend-inner-icon="mdi mdi-lock-outline" bg-color="#ffffff"
-                                class="text-black" rounded="xl" v-model="password.value.value"
-                                placeholder="password"></v-text-field>
+                            <v-text-field type="password" prepend-inner-icon="mdi mdi-lock-outline" bg-color="#ffffff"
+                                class="text-black" rounded="xl" width="20" v-model="password.value.value" :counter="10"
+                                variant="solo" :error-messages="password.errorMessage.value"
+                                label="password"></v-text-field>
                         </v-responsive>
                         <v-responsive max-width="500">
-                            <v-text-field variant="outline" prepend-inner-icon="mdi mdi-lock-outline" bg-color="#ffffff"
-                                class="text-black" rounded="xl" v-model="confirmPassword.value.value"
-                                placeholder="Confirm Password"></v-text-field>
+                            <v-text-field type="password" prepend-inner-icon="mdi mdi-lock-outline" bg-color="#ffffff"
+                                class="text-black" rounded="xl" width="20" v-model="confirmPassword.value.value"
+                                :counter="10" variant="solo" :error-messages="confirmPassword.errorMessage.value"
+                                label="confirm password"></v-text-field>
                         </v-responsive>
-                        <v-btn class="text-white" flat type="submit" color="customButton" width="500px" height="50px"
-                            rounded>Create
-                            Account</v-btn>
+                        <v-btn type="submit" class="text-white" flat color="customButton" width="500px" height="50px"
+                            rounded>
+                            Create Account </v-btn>
                     </form>
                 </v-col>
             </v-row>
@@ -43,20 +45,12 @@
     </div>
 </template>
 
+
 <script>
 import { useField, useForm } from 'vee-validate'
 
 export default {
-    name: "SignUp",
     setup() {
-
-        const userName = useField('userName')
-        const email = useField('email')
-        const password = useField('password')
-        const confirmPassword = useField('confirmPassword')
-
-
-
         const { handleSubmit, handleReset } = useForm({
             validationSchema: {
                 name(value) {
@@ -64,37 +58,42 @@ export default {
 
                     return 'Name needs to be at least 2 characters.'
                 },
-                phone(value) {
-                    if (value?.length > 9 && /[0-9-]+/.test(value)) return true
-
-                    return 'Phone number needs to be at least 9 digits.'
-                },
                 email(value) {
                     if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true
 
                     return 'Must be a valid e-mail.'
                 },
-                select(value) {
-                    if (value) return true
+                password(value) {
+                    if (value?.length >= 6) return true
 
-                    return 'Select an item.'
+                    return 'Name needs to be at least 6 characters.'
                 },
-                checkbox(value) {
-                    if (value === '1') return true
+                confirmPassword(value) {
+                    if (value?.length >= 6) return true
 
-                    return 'Must be checked.'
+                    return 'Name needs to be at least 6 characters.'
                 },
             },
         })
+        const name = useField('name')
+        const email = useField('email')
+        const password = useField('password')
+        const confirmPassword = useField('confirmPassword')
+
+
         const submit = handleSubmit(values => {
             alert(JSON.stringify(values, null, 2))
         })
 
         return {
-            userName, email, password, confirmPassword, submit, handleReset
+            name,
+            email,
+            password,
+            confirmPassword,
+            submit,
+            handleReset,
         }
-    }
-
+    },
 }
 </script>
 
