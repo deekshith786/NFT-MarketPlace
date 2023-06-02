@@ -10,7 +10,7 @@
         <v-row>
             <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
                 <v-card rounded="xl" variant="text">
-                    <v-img :src="card.src" max-height="300px" min-height="300px" cover></v-img>
+                    <v-img :src="card.src" max-height="330px" min-height="330px" cover></v-img>
                 </v-card>
                 <v-row class="mt-2 pa-2">
                     <v-col rounded="xl" v-for="card in cards" :key="card.title" :cols="card.flex">
@@ -39,21 +39,21 @@ export default {
             {
                 title: 'DSGN Animals',
                 name: 'MrFox',
-                src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
+                src: '/public/cardImageOne.png',
                 flex: 4,
                 avatar: '',
             },
             {
                 title: 'Magic Mushrooms',
                 name: 'Shroomie',
-                src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
+                src: '/public/cardImageTwo.png',
                 flex: 4,
                 avatar: '',
             },
             {
                 title: 'Disco Machines',
                 name: 'Bekind2Robots',
-                src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg',
+                src: '/public/cardImageThree.png',
                 flex: 4,
                 avatar: '',
             },

@@ -35,19 +35,15 @@
                 </v-col>
                 <v-col>
                     <v-card variant="tonal" max-width="auto" rounded="xl">
-                        <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="auto" cover></v-img>
-
+                        <v-img src="/public/heroImage.png" height="auto" cover></v-img>
                         <v-card-title>
                             Space Walking
                         </v-card-title>
-
                         <v-card-text class="d-flex">
-
                             <v-avatar>
-                                <v-img src="https://w0.peakpx.com/wallpaper/482/730/HD-wallpaper-7th-hokage-naruto-sasuke-sasuke-naruto-sakura-sasuke-and-sakura-anime-anime-art-anime-sakura.jpg" alt="John"></v-img>
+                                <v-img src="/public/Avatar.png" alt="John"></v-img>
                             </v-avatar>
                             <p class="ml-2 pa-2">Animakid</p>
-
                         </v-card-text>
                     </v-card>
 
