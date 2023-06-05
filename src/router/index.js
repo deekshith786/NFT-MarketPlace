@@ -24,6 +24,12 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "home" */ "@/views/ArtistPage.vue"),
       },
+      {
+        path: "/nft-page",
+        name: "NftPage",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "@/views/NftPage.vue"),
+      },
     ],
   },
 ];
