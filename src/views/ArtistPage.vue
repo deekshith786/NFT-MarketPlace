@@ -1,6 +1,8 @@
 <template>
-    <ArtistInfo />
-    <ArtistCardsSection />
+    <div>
+        <ArtistInfo />
+        <ArtistCardsSection />
+    </div>
 </template>
 
 <script>

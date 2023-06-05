@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class="pa-0">
+    <v-container fluid class="pa-0 mb-5">
         <v-row>
             <v-img src="/public/artist_bg.png" max-height="370px" cover></v-img>
         </v-row>
