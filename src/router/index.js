@@ -30,6 +30,12 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "home" */ "@/views/NftPage.vue"),
       },
+      {
+        path: "/ranking",
+        name: "RankingPage",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "@/views/RankingPage.vue"),
+      },
     ],
   },
 ];
