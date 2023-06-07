@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="pa-0 mb-5">
         <v-row>
-            <v-img src="/public/NFT/NftInfo.png" max-height="500px" cover></v-img>
+            <v-img src="/public/NftInfo.png" max-height="500px" cover></v-img>
         </v-row>
         <v-row class="mt-12">
             <v-col class="d-flex justify-space-evenly">
