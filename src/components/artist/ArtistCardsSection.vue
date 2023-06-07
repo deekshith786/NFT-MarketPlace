@@ -55,13 +55,13 @@ export default {
         const tab = ref(null)
         const artists = ref(
             [
-                { name: 'Life On Edena', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistTwo.png" },
                 { name: 'AstroFiction', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistThree.png" },
                 { name: 'Space Tales', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistSix.png" },
                 { name: 'CryptoCity', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistFour.png" },
                 { name: 'ColorfulDog 0524', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistFive.png" },
                 { name: 'Cherry Blossom Girl 037', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistSeven.png" },
                 { name: 'IceCream Ape', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistNine.png" },
+                { name: 'Life On Edena', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistTwo.png" },
                 { name: 'Dancing Robots 0987', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistEight.png" },
                 { name: 'Distant Galaxy', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistOne.png" },
             ])

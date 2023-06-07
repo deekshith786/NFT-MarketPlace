@@ -53,15 +53,15 @@ export default {
         const tab = ref(null)
         const markets = ref(
             [
-                { name: 'Life On Edena', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistTwo.png" },
-                { name: 'AstroFiction', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistThree.png" },
-                { name: 'CryptoCity', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistFour.png" },
-                { name: 'ColorfulDog 0524', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistFive.png" },
-                { name: 'Distant Galaxy', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistOne.png" },
-                { name: 'Space Tales', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistSix.png" },
-                { name: 'Cherry Blossom Girl 037', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistSeven.png" },
-                { name: 'Dancing Robots 0987', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistEight.png" },
-                { name: 'IceCream Ape', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistNine.png" },
+                { name: 'Life On Edena', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistTwo.png" },
+                { name: 'AstroFiction', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistThree.png" },
+                { name: 'CryptoCity', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistFour.png" },
+                { name: 'ColorfulDog 0524', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistFive.png" },
+                { name: 'Distant Galaxy', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistOne.png" },
+                { name: 'Space Tales', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistSix.png" },
+                { name: 'Cherry Blossom Girl 037', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistSeven.png" },
+                { name: 'Dancing Robots 0987', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistEight.png" },
+                { name: 'IceCream Ape', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/ArtistNine.png" },
             ])
         return {
             markets,
