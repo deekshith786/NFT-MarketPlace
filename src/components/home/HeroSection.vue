@@ -17,7 +17,7 @@
                         </v-card-text>
                         <v-card-text>
                             <v-btn height="60px" width="200px" prepend-icon="mdi mdi-rocket-launch-outline" color="customButton" rounded flat
-                                class="text-white">Get Started</v-btn>
+                                class="text-white" router to="/signup">Get Started</v-btn>
                         </v-card-text>
                     </v-card>
 
