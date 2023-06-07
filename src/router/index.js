@@ -48,6 +48,9 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "home" */ "@/views/ConnectWallet.vue"),
       },
+      {
+        path: "*", redirect: "/"
+      }
     ],
   },
 ];
