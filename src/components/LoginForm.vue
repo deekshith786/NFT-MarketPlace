@@ -2,7 +2,7 @@
     <v-container>
         <v-row class="pa-2 ma-2">
             <v-col>
-                <v-img src="public/Fingerprint.png"></v-img>
+                <v-img src="/public/Fingerprint.png"></v-img>
             </v-col>
             <v-col>
                 <div>
