@@ -3,7 +3,7 @@
         <v-container fluid>
             <v-row class="pa-2 ma-2">
                 <v-col>
-                    <v-img src="public/login.png"></v-img>
+                    <v-img src="/public/login.png"></v-img>
                 </v-col>
                 <v-col>
                     <div>
