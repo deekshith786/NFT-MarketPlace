@@ -9,12 +9,12 @@
         </v-row>
         <v-row>
             <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
-                <v-card rounded="xl" variant="text" href="/artist">
+                <v-card rounded="xl" variant="text" href="/nft-page">
                     <v-img :src="card.src" max-height="330px" min-height="330px" cover></v-img>
                 </v-card>
                 <v-row class="mt-2 pa-2">
                     <v-col rounded="xl" v-for="card in cards" :key="card.title" :cols="card.flex">
-                        <v-card rounded="xl" variant="text" link="/artist">
+                        <v-card rounded="xl" variant="text" href="/nft-page">
                             <v-img :src="card.src" max-height="100px" min-height="100px" cover></v-img>
                         </v-card>
                     </v-col>
