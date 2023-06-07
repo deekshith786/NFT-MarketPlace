@@ -8,13 +8,13 @@
         <v-btn variant="plain"  class="mr-5 text-white" router to="/market-place">Marketplace</v-btn>
         <v-btn variant="plain"  class="mr-5 text-white" router to="/ranking">Rankings</v-btn>
         <v-btn variant="plain"  class="mr-5 text-white" router to="/connect-wallet">Connect a wallet</v-btn>
-        <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
+        <!-- <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
             color="customButton" class="text-white" router to="/signup" v-if="$route.path === '/signup'">Sign
-            Up</v-btn>
+            Up</v-btn> -->
         <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
-            color="customButton" class="text-white" router to="/signup" v-else-if="$route.path === '/'">Sign
+            color="customButton" class="text-white" router to="/signup">Sign
             Up</v-btn>
-        <p v-else></p>
+        <!-- <p v-else></p> -->
     </v-toolbar>
 </template>
 <script>

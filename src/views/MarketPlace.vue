@@ -8,17 +8,17 @@
             </v-col>
         </v-row>
         <v-row wrap class="text-center">
-            <ArtistCardsSection />
+            <MarketplaceCards />
         </v-row>
     </v-container>
 </template>
 
 <script>
-import ArtistCardsSection from '@/components/artist/ArtistCardsSection.vue';
+import MarketplaceCards from '@/components/MarketplaceCards.vue';
 
     export default {
     name: "MarketPlace",
-    components: { ArtistCardsSection }
+    components: { MarketplaceCards }
 }
 </script>
 

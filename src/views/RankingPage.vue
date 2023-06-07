@@ -76,15 +76,15 @@ export default {
         const tab = ref(null)
         const ranking = ref(
             [
-                { name: 'Jaydon Bothman', change: "+1.14%", image: "/public/ArtistOne.png", volume: "12.4 ETH", NFTs_Sold: "602" },
-                { name: 'Life On Edena', change: "+1.14%", image: "/public/ArtistTwo.png", volume: "12.4 ETH", NFTs_Sold: "602" },
-                { name: 'AstroFiction', change: "+1.14%", image: "/public/ArtistThree.png", volume: "12.4 ETH", NFTs_Sold: "602" },
-                { name: 'CryptoCity', change: "+1.14%", image: "/public/ArtistFour.png", volume: "12.4 ETH", NFTs_Sold: "602" },
-                { name: 'ColorfulDog 052', change: "+1.14%", image: "/public/ArtistFive.png", volume: "12.4 ETH", NFTs_Sold: "602" },
-                { name: 'Space Tales', change: "+1.14%", image: "/public/ArtistSix.png", volume: "12.4 ETH", NFTs_Sold: "602" },
-                { name: 'Cherry Blossom ', change: "+1.14%", image: "/public/ArtistSeven.png", volume: "12.4 ETH", NFTs_Sold: "602" },
-                { name: 'Dancing Robots', change: "+1.14%", image: "/public/ArtistEight.png", volume: "12.4 ETH", NFTs_Sold: "602" },
-                { name: 'IceCream Ape', change: "+1.14%", image: "/public/ArtistNine.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'Life On Edena', change: "+1.14%", image: "/ArtistTwo.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'AstroFiction', change: "+1.14%", image: "/ArtistThree.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'CryptoCity', change: "+1.14%", image: "/ArtistFour.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'ColorfulDog 052', change: "+1.14%", image: "/ArtistFive.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'Jaydon Bothman', change: "+1.14%", image: "/ArtistOne.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'Space Tales', change: "+1.14%", image: "/ArtistSix.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'Cherry Blossom ', change: "+1.14%", image: "/ArtistSeven.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'Dancing Robots', change: "+1.14%", image: "/ArtistEight.png", volume: "12.4 ETH", NFTs_Sold: "602" },
+                { name: 'IceCream Ape', change: "+1.14%", image: "/ArtistNine.png", volume: "12.4 ETH", NFTs_Sold: "602" },
             ])
 
         return {
