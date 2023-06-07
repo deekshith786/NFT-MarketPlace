@@ -19,12 +19,12 @@
                                             indeterminate></v-progress-linear>
                                     </template>
                                     <v-img cover height="295" width="330" :src=team.image></v-img>
-                                    <v-card-item>
+                                    <v-card-item class="text-left">
                                         <v-card-title>{{ team.name }}</v-card-title>
                                         <v-avatar>
                                             <v-img src="/public/Avatar.png" alt="John"></v-img>
                                         </v-avatar>
-                                        <span class="ml-3">Animakid</span>
+                                        <span class="ml-3">Stealth Spidy</span>
                                     </v-card-item>
                                     <v-card-actions class="d-flex">
                                         <div>
@@ -55,15 +55,15 @@ export default {
         const tab = ref(null)
         const artists = ref(
             [
-                { name: 'Distant Galaxy', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistOne.png" },
-                { name: 'Life On Edena', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistTwo.png" },
-                { name: 'AstroFiction', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistThree.png" },
-                { name: 'CryptoCity', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistOne.png" },
-                { name: 'ColorfulDog 0524', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistOne.png" },
-                { name: 'Space Tales', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistOne.png" },
-                { name: 'Cherry Blossom Girl 037', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistOne.png" },
-                { name: 'Dancing Robots 0987', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistOne.png" },
-                { name: 'IceCream Ape', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/Artist/ArtistOne.png" },
+                { name: 'Life On Edena', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistTwo.png" },
+                { name: 'AstroFiction', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistThree.png" },
+                { name: 'CryptoCity', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistFour.png" },
+                { name: 'ColorfulDog 0524', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistFive.png" },
+                { name: 'Distant Galaxy', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistOne.png" },
+                { name: 'Space Tales', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistSix.png" },
+                { name: 'Cherry Blossom Girl 037', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistSeven.png" },
+                { name: 'Dancing Robots 0987', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistEight.png" },
+                { name: 'IceCream Ape', role: "Total Sales: 34.53 ETH", avatar: '/public/Avatar.png', image: "/public/ArtistNine.png" },
             ])
         return {
             artists,

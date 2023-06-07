@@ -7,8 +7,9 @@
             </v-col>
             <v-col class="text-end">
                 <v-btn height="60px" width="250px" variant="outlined" color="customButton"
-                    prepend-icon="mdi mdi-rocket-launch-outline" rounded>
-                    <p class="text-white" variant="text" @click="$router.push('/ranking')"> View Rankings</p>
+                    prepend-icon="mdi mdi-rocket-launch-outline" rounded href="/ranking">
+                    <!-- <p class="text-white" variant="text" @click="$router.push('/ranking')"> View Rankings</p> -->
+                    <p class="text-white" variant="text"> View Rankings</p>
                 </v-btn>
             </v-col>
         </v-row>

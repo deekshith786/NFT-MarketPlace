@@ -43,7 +43,7 @@
                             <v-avatar>
                                 <v-img src="/public/Avatar.png" alt="John"></v-img>
                             </v-avatar>
-                            <p class="ml-2 pa-2">Animakid</p>
+                            <p class="ml-2 pa-2">Stealth Spidy</p>
                         </v-card-text>
                     </v-card>
 
