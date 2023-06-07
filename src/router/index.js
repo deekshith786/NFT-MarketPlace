@@ -42,6 +42,12 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "home" */ "@/views/MarketPlace.vue"),
       },
+      {
+        path: "/connect-wallet",
+        name: "ConnectWallet",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "@/views/ConnectWallet.vue"),
+      },
     ],
   },
 ];
