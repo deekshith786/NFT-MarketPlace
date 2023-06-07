@@ -10,6 +10,7 @@ import ArtistCardsSection from '@/components/artist/ArtistCardsSection.vue';
 import ArtistInfo from '@/components/artist/ArtistInfo.vue';
 
 export default {
+    name:"ArtistPage",
     components: { ArtistInfo, ArtistCardsSection }
 }
 

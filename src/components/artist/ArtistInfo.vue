@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class="pa-0 mb-5">
+    <v-container fluid class="pa-0 mb-5 mt-1">
         <v-row>
             <v-img src="/public/artist_bg.png" max-height="370px" cover></v-img>
         </v-row>
@@ -12,7 +12,7 @@
         </v-row>
         <v-row class="pl-15">
             <v-col>
-                <h1>Animakid</h1>
+                <h1>Stealth spidy</h1>
                 <v-card variant="text">
                     <v-card-actions class="pa-0 mt-2">
                         <div class=" mr-5 font-weight-bold text-h6">250k+

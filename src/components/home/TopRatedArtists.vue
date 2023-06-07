@@ -15,7 +15,7 @@
         </v-row>
         <v-row wrap class="text-center">
             <v-col v-for="team in creators" :key="team.name" cols="3">
-                <v-card flat variant="tonal" rounded="xl" dark class="border" href="/artist">
+                <v-card variant="tonal" rounded="xl" class="border" href="/artist">
                     <v-avatar size="100" class="mt-6">
                         <img :src="team.avatar" width="100" height="100">
                     </v-avatar>
