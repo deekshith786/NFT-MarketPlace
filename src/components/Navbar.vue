@@ -4,8 +4,8 @@
         <v-toolbar-title style="cursor: pointer" @click="$router.push('/')"><span
                 class="font-weight-bold mr-2">NFT</span>Marketplace</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn text="Asdf">Marketplace</v-btn>
-        <v-btn>Rankings</v-btn>
+        <v-btn text="Asdf" router to="/market-place">Marketplace</v-btn>
+        <v-btn router to="/ranking">Rankings</v-btn>
         <v-btn>Connect a wallet</v-btn>
         <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
             color="customButton" class="text-white" router to="/signup" v-if="$route.path === '/signup'">Sign

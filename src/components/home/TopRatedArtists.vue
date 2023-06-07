@@ -8,13 +8,13 @@
             <v-col class="text-end">
                 <v-btn height="60px" width="250px" variant="outlined" color="customButton"
                     prepend-icon="mdi mdi-rocket-launch-outline" rounded>
-                    <span class="text-white"> View Rankings</span>
+                    <p class="text-white" variant="text" @click="$router.push('/ranking')"> View Rankings</p>
                 </v-btn>
             </v-col>
         </v-row>
         <v-row wrap class="text-center">
             <v-col v-for="team in creators" :key="team.name" cols="3">
-                <v-card flat variant="tonal" rounded="xl" dark class="border">
+                <v-card flat variant="tonal" rounded="xl" dark class="border" href="/artist">
                     <v-avatar size="100" class="mt-6">
                         <img :src="team.avatar" width="100" height="100">
                     </v-avatar>
@@ -57,9 +57,15 @@ export default {
 </script>
 
 <style scoped>
-
 .v-btn {
     text-transform: none;
 }
 
+.v-card:hover {
+    transform: scale(0.9);
+}
+
+.v-card {
+    transition: transform 0.5s;
+}
 </style>

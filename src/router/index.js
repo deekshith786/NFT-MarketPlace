@@ -36,6 +36,12 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "home" */ "@/views/RankingPage.vue"),
       },
+      {
+        path: "/market-place",
+        name: "MarketPlace",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "@/views/MarketPlace.vue"),
+      },
     ],
   },
 ];
