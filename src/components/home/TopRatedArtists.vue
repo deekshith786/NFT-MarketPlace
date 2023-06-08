@@ -7,7 +7,7 @@
             </v-col>
             <v-col class="text-end">
                 <v-btn height="60px" width="250px" variant="outlined" color="customButton"
-                    prepend-icon="mdi mdi-rocket-launch-outline" rounded href="/ranking">
+                    prepend-icon="mdi mdi-rocket-launch-outline" rounded router to="/ranking">
                     <!-- <p class="text-white" variant="text" @click="$router.push('/ranking')"> View Rankings</p> -->
                     <p class="text-white" variant="text"> View Rankings</p>
                 </v-btn>
@@ -15,7 +15,7 @@
         </v-row>
         <v-row wrap class="text-center">
             <v-col v-for="team in creators" :key="team.name" cols="3">
-                <v-card variant="tonal" rounded="xl" class="border" href="/artist">
+                <v-card variant="tonal" rounded="xl" class="border" router to="/artist">
                     <v-avatar size="100" class="mt-6">
                         <img :src="team.avatar" width="100" height="100">
                     </v-avatar>

@@ -38,7 +38,7 @@
                 <v-text-field variant="outlined" placeholder="Enter your email here" class="text-end"> </v-text-field>
                 <!-- <v-btn color="customButton" rounded="xl">Connect a wallet</v-btn> -->
                 <v-btn height="60px" width="200px" color="customButton" rounded flat
-                                class="text-white" href="/connect-wallet">Connect a wallet</v-btn>
+                                class="text-white" router to="/connect-wallet">Connect a wallet</v-btn>
             </v-col>
         </v-row>
     </v-card>
