@@ -20,7 +20,6 @@ import keycloak from '../src/keycloak.js'
 import { registerPlugins } from '@/plugins'
 
 
-
 keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
   if (authenticated) {
     const app = createApp(App);

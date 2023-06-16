@@ -1,5 +1,7 @@
 // Composables
 import { createRouter, createWebHistory } from "vue-router";
+// import keycloak from '@/keycloak'; // Import the keycloak object
+
 
 const routes = [
   {
@@ -10,6 +12,7 @@ const routes = [
       {
         path: "",
         name: "HomePage",
+        meta: { requiresAuth: true },
         component: () =>
           import(/* webpackChunkName: "home" */ "@/views/HomePage.vue"),
       },
