@@ -24,4 +24,4 @@ registerPlugins(app)
 
 app.mount('#app')
 
-KeyCloakService.CallLogin(app);
+// KeyCloakService.CallLogin(app);

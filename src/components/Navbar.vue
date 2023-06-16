@@ -4,24 +4,49 @@
         <v-toolbar-title style="cursor: pointer" @click="$router.push('/')"><span
                 class="font-weight-bold mr-2">NFT</span>Marketplace</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-btn  variant="plain"  class="mr-5 text-white" router to="/">Home</v-btn>
-        <v-btn variant="plain"  class="mr-5 text-white" router to="/market-place">Marketplace</v-btn>
-        <v-btn variant="plain"  class="mr-5 text-white" router to="/ranking">Rankings</v-btn>
-        <v-btn variant="plain"  class="mr-5 text-white" router to="/connect-wallet">Connect a wallet</v-btn>
+        <v-btn variant="plain" class="mr-5 text-white" router to="/">Home</v-btn>
+        <v-btn variant="plain" class="mr-5 text-white" router to="/market-place">Marketplace</v-btn>
+        <v-btn variant="plain" class="mr-5 text-white" router to="/ranking">Rankings</v-btn>
+        <v-btn variant="plain" class="mr-5 text-white" router to="/connect-wallet">Connect a wallet</v-btn>
         <!-- <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
             color="customButton" class="text-white" router to="/signup" v-if="$route.path === '/signup'">Sign
             Up</v-btn> -->
-        <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
+        <!-- <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
             color="customButton" class="text-white" router to="/signup">Sign
+            Up</v-btn> -->
+        <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
+            color="customButton" class="text-white" @click="LoginUser" router to="/artist">Sign
             Up</v-btn>
+
         <!-- <p v-else></p> -->
     </v-toolbar>
 </template>
 <script>
+
+import { ref } from "vue";
+import KeyCloakService from "../security/KeycloakService";
+
 export default {
     name: "Navbar",
     setup() {
+        // const UserName = (): string | undefined =>
 
+
+        function LoginUser() {
+            return KeyCloakService.CallLogin()
+        }
+        function LogoutUser() {
+            return KeyCloakService.CallLogout()
+        }
+
+        function GetAccessToken() {
+            return KeyCloakService.GetAccesToken()
+        }
+        return {
+            LoginUser,
+            LogoutUser,
+            GetAccessToken
+        }
     }
 };
 </script>

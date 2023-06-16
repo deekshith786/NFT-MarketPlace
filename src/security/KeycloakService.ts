@@ -22,8 +22,17 @@ const Login = (onAuthenticatedCallback: CallbackOneParam) => {
     });
 };
 
+const Logout = () => {
+  return keycloakInstance.logout()
+}
+const UserName = (): string | undefined =>
+  keycloakInstance?.tokenParsed?.preferred_username;
+
+const Token = (): string | undefined => keycloakInstance?.token;
+
+
 const KeyCloakService = {
-  CallLogin: Login,
+  CallLogin: Login, CallLogout: Logout, GetUserName: UserName, GetAccesToken: Token,
 };
 
 export default KeyCloakService;
