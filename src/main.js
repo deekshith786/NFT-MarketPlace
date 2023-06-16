@@ -13,15 +13,19 @@ import App from './App.vue'
 import { createApp } from 'vue'
 
 // keycloak service
-import KeyCloakService from "./security/KeycloakService";
+import keycloak from '../src/keycloak.js'
+
 
 // Plugins
 import { registerPlugins } from '@/plugins'
 
-const app = createApp(App)
 
-registerPlugins(app)
 
-app.mount('#app')
-
-// KeyCloakService.CallLogin(app);
+keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
+  if (authenticated) {
+    const app = createApp(App);
+    registerPlugins(app)
+    app.config.globalProperties.$keycloak = keycloak; // Make $keycloak available globally
+    app.mount('#app');
+  }
+});

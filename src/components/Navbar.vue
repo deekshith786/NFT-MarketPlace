@@ -15,39 +15,23 @@
             color="customButton" class="text-white" router to="/signup">Sign
             Up</v-btn> -->
         <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
-            color="customButton" class="text-white" @click="LoginUser" router to="/artist">Sign
+            color="customButton" class="text-white" v-if="!$keycloak.authenticated" @click="$keycloak.login()" router
+            to="/artist">Sign
             Up</v-btn>
+        <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
+            color="customButton" class="text-white" v-if="$keycloak.authenticated" @click="$keycloak.logout()" router
+            to="/artist">logout
+        </v-btn>
 
         <!-- <p v-else></p> -->
     </v-toolbar>
 </template>
 <script>
 
-import { ref } from "vue";
-import KeyCloakService from "../security/KeycloakService";
 
 export default {
     name: "Navbar",
-    setup() {
-        // const UserName = (): string | undefined =>
 
-
-        function LoginUser() {
-            return KeyCloakService.CallLogin()
-        }
-        function LogoutUser() {
-            return KeyCloakService.CallLogout()
-        }
-
-        function GetAccessToken() {
-            return KeyCloakService.GetAccesToken()
-        }
-        return {
-            LoginUser,
-            LogoutUser,
-            GetAccessToken
-        }
-    }
 };
 </script>
 
