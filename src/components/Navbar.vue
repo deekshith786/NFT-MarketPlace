@@ -15,23 +15,51 @@
             color="customButton" class="text-white" router to="/signup">Sign
             Up</v-btn> -->
         <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
-            color="customButton" class="text-white" v-if="!$keycloak.authenticated" @click="$keycloak.login()" router
-            to="/artist">Sign
+            color="customButton" class="text-white" v-if="!$keycloak.authenticated" @click="login" router to="/artist">Sign
             Up</v-btn>
         <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
-            color="customButton" class="text-white" v-if="$keycloak.authenticated" @click="$keycloak.logout()" router
-            to="/artist">logout
+            color="customButton" class="text-white"  v-if="$keycloak.authenticated" @click="logout" router
+            to="/">logout
         </v-btn>
 
         <!-- <p v-else></p> -->
     </v-toolbar>
 </template>
-<script>
+<!-- <script>
 
 
 export default {
     name: "Navbar",
+    
+};
+</script> -->
+<script>
+import keycloak from '../../src/keycloak.js'
 
+
+export default {
+    name: "Navbar",
+    methods: {
+        login() {
+            keycloak
+                .init({
+                    onLoad: 'check-sso',
+                })
+                .then((authenticated) => {
+                    if (!authenticated) {
+                        keycloak.login();
+                    } else {
+                        console.log('User is already authenticated');
+                    }
+                })
+                .catch((error) => {
+                    console.error('Keycloak initialization error:', error);
+                });
+        },
+        logout() {
+            keycloak.logout();
+        },
+    },
 };
 </script>
 

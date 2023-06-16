@@ -19,12 +19,12 @@ import keycloak from '../src/keycloak.js'
 // Plugins
 import { registerPlugins } from '@/plugins'
 
+const app = createApp(App);
+registerPlugins(app)
+app.config.globalProperties.$keycloak = keycloak; // Make $keycloak available globally
+app.mount('#app');
 
-keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
-  if (authenticated) {
-    const app = createApp(App);
-    registerPlugins(app)
-    app.config.globalProperties.$keycloak = keycloak; // Make $keycloak available globally
-    app.mount('#app');
-  }
-});
+// keycloak.init({ onLoad: 'login-required' }).then((authenticated) => {
+//   if (authenticated) {
+//   }
+// });
