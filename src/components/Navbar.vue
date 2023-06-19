@@ -54,19 +54,21 @@ export default {
                 keycloak.login();
                 console.log('Keycloak Initialization Successful');
                 console.log('Authenticated:', authenticated);
+                
             } else {
                 console.log('User is already authenticated');
             }
         };
-
+        
         const logout = () => {
             isAuthenticated.value = false;
             router.push('/');
             keycloak.logout({ redirectUri: window.location.origin });
         };
-
+        
         keycloak.onAuthSuccess = () => {
             isAuthenticated.value = true;
+            console.log('token:', keycloak.token);
             router.push('/market-place');
         };
         keycloak.onAuthLogout = () => {

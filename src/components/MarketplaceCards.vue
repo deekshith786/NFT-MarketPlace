@@ -11,7 +11,7 @@
                     <v-container>
                         <v-row>
                             <v-col v-for="team in markets" :key="team.name">
-                                <v-card class="mx-auto my-12" max-width="330" max-height="470" rounded="xl" variant="tonal">
+                                <v-card class="mx-auto my-12" max-width="330" max-height="470" rounded="xl" variant="tonal" router to="/nft-page">
                                     <template v-slot:loader="{ isActive }">
                                         <v-progress-linear :active="isActive" color="deep-purple" height="4"
                                             indeterminate></v-progress-linear>
