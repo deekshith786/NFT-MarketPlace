@@ -8,13 +8,5 @@ const keycloakConfig = {
 
 const keycloak = new Keycloak(keycloakConfig);
 
-keycloak.init({ onLoad: 'check-sso' })
-  .then((authenticated) => {
-    console.log('Keycloak Initialization Successful');
-    console.log('Authenticated:', authenticated);
-  })
-  .catch((error) => {
-    console.error('Keycloak Initialization Error:', error);
-  });
 
 export default keycloak;

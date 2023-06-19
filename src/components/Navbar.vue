@@ -15,12 +15,17 @@
             color="customButton" class="text-white" router to="/signup">Sign
             Up</v-btn> -->
         <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
-            color="customButton" class="text-white" v-if="!$keycloak.authenticated" @click="login" router to="/artist">Sign
+            color="customButton" class="text-white" @click="login" v-if="!isAuthenticated">Sign
             Up</v-btn>
         <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
-            color="customButton" class="text-white"  v-if="$keycloak.authenticated" @click="logout" router
-            to="/">logout
+            color="customButton" class="text-white" @click="logout" v-else>logout
         </v-btn>
+
+        <!-- <v-btn prepend-icon="mdi mdi-account-outline" height="55px" width="150px" rounded variant="flat"
+            color="customButton" class="text-white" @click="login" router to="/artist">
+            {{ isAuthenticated ? 'Profile' : 'Sign Up' }}
+        </v-btn> -->
+
 
         <!-- <p v-else></p> -->
     </v-toolbar>
@@ -34,31 +39,55 @@ export default {
 };
 </script> -->
 <script>
+import { ref, onBeforeMount } from 'vue';
 import keycloak from '../../src/keycloak.js'
+import router from '@/router';
 
 
 export default {
     name: "Navbar",
-    methods: {
-        login() {
-            keycloak
-                .init({
-                    onLoad: 'check-sso',
-                })
-                .then((authenticated) => {
-                    if (!authenticated) {
-                        keycloak.login();
-                    } else {
-                        console.log('User is already authenticated');
-                    }
-                })
-                .catch((error) => {
-                    console.error('Keycloak initialization error:', error);
-                });
-        },
-        logout() {
+
+
+    setup() {
+        const isAuthenticated = ref(false);
+
+        onBeforeMount(async () => {
+            try {
+                await keycloak.init({ onLoad: 'check-sso' });
+                isAuthenticated.value = keycloak.authenticated;
+            } catch (error) {
+                console.error('Keycloak Initialization Error:', error);
+            }
+        });
+
+        const login = () => {
+            if (!isAuthenticated.value) {
+                keycloak.login();
+            } else {
+                console.log('User is already authenticated');
+            }
+        };
+
+        const logout = () => {
             keycloak.logout();
-        },
+            isAuthenticated.value = false;
+        };
+
+        keycloak.onAuthSuccess = () => {
+            isAuthenticated.value = true;
+            router.push('/artist');
+        };
+        keycloak.onAuthLogout = () => {
+            isAuthenticated.value = false;
+            router.push('/');
+        };
+
+
+        return {
+            isAuthenticated,
+            login,
+            logout
+        };
     },
 };
 </script>
